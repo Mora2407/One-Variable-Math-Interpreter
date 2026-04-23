@@ -25,7 +25,7 @@ A simple math interpreter designed to solve basic linear equations with one vari
 * **Complex Division:** `(x + 1) / (x + 2)`
 
 ### Unary Operators & Parentheses
-* **Unary Minus:** `-5` atau `--5`
+* **Unary Minus:** `-5`, `--5 = 5`
 * **Nested Parentheses:** `((1 + 2) * 3)`
 
 ## Equations
