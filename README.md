@@ -1,43 +1,44 @@
 A simple math interpreter designed to solve basic linear equations with one variable.
 
 ## Syntax
+
 ### Addition
-* **Example:** `1 + 1/x`
-* **Commutative Property:** `x + 1`
-* **Associative Property:** `1 + (2 + 3)x`
+* **Example:** `1 + 1`
+* **Commutative:** `1 + 2 = 2 + 1`
+* **Associative:** `(1 + 2) + 3 = 1 + (2 + 3)`
+* **Variable Addition:** `x + x = 2x`
 
 ### Subtraction
-* **Example:** `100 - 5x`
-* **Non-Commutative:** `x - 12` (Order of operands matters)
+* **Example:** `2 - 1`
+* **Non-Commutative:** `2 - 1 != 1 - 2`
+* **Variable Subtraction:** `2x - x = x`
 
 ### Multiplication
-* **Example:** `(1 / x)x`
-* **Commutative Property:** `1 * (2 + 3) * 4`
-* **Associative Property:** `(1/x) * (1/(1/x))`
-* **Distributive Property:** `3 * (k - 2)` or `5 * (2 * p + 1)`
+* **Example:** `2 * 3`
+* **Commutative:** `2 * 3 = 3 * 2`
+* **Distributive:** `2 * (x + 3) = 2x + 6`
+* **Implicit Multiplication:** `10x`
 
 ### Division
-* **Example:** `20 / 5`
-* **Complex Division:** `2 / ((x + 5) / (x + 10))`
+* **Example:** `10 / 2`
+* **Variable Division:** `4x / 2 = 2x`
+* **Complex Division:** `(x + 1) / (x + 2)`
 
-### Unary Operators & Nested Parentheses
-* **Unary:** `--+456.789`
-* **Nested:** `( ( (100 - 5*2) / 10 ) + --1 )`
+### Unary Operators & Parentheses
+* **Unary Minus:** `-5` atau `--5`
+* **Nested Parentheses:** `((1 + 2) * 3)`
 
 ## Equations
-### Basic Linear Solving
+
+### Solving for X
 * `x + 1 = 5` → **x = 4**
-* `7y = 49` → **y = 7**
+* `2x = 10` → **x = 5**
 
-### Multi-variable / Polynomial Error
-The system only supports linear equations with one variable. Multiplying variables or using different variable names will trigger an error.
-* `x * x = 4` → **Error: Nonlinear equations (polynomials) not supported**
-* `x + y = 10` → **Error: Multiple variables not supported**
+### Errors & Edge Cases
+* **Multi-variable:** `x + y = 10` → **Error: Multiple variables not supported**
+* **Non-linear:** `x * x = 4` → **Error: Nonlinear equations not supported**
+* **Infinite Solutions:** `x + 1 = x + 1` → **Infinite Solutions**
+* **No Solution:** `x + 1 = x + 2` → **No Solution**
 
-### Infinite Solutions (Identity)
-Occurs when both sides of the equation are identical after simplification.
-* `2 * (3 * m + 5) = 6 * m + 10` → **Infinite Solutions**
-
-### No Solution (Contradiction)
-Occurs when the equation leads to an impossible statement.
-* `4 * (a + 1) + 2 = 4 * a + 7` → **No Solution**
+## Benchmark
+<img width="465" height="161" alt="image" src="https://github.com/user-attachments/assets/8e3919fb-1b3f-4537-8aba-0920b51bcd8c" />
